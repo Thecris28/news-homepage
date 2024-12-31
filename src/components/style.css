@@ -1,0 +1,255 @@
+:root{
+
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+
+
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1;
+  }
+  
+  .overlay.visible {
+    display: block;
+  }
+  
+  .navbar {
+    list-style-type: none;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 256px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* transform: translateX(100%);
+    transition: transform 0.3s ease-in-out; */
+    z-index: 2;
+  }
+  
+  .navbar.open {
+    /* transform: translateX(0); */
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .close-menu {
+    margin-bottom: 65px;
+  }
+.close-menu-li{
+    display: flex;
+    justify-content: end;
+}
+.navbar a{
+    font-size: 17px;
+    text-decoration: none;
+    color: var(--Very-dark-blue);
+    
+}
+.navbar a:hover{
+    color: var(--Soft-orange);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 32px;
+}
+.header-img{
+    height: 29px;
+
+}
+.open-button{
+    cursor: pointer;
+    border-style: none;
+    background-color: transparent;
+}
+
+.main-article{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+.main-article-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+.main-title{
+    flex: 1 1 0;
+    font-size: 40px;
+    font-weight: 800; 
+    line-height: 1;
+    padding-bottom: 20px;
+    margin-right: 10px;
+}
+
+
+.main-content{
+    flex: 1 1 0;
+}
+.main-content .main-paragraph{
+    font-size: 15px;
+    color: var(--Dark-grayish-blue);
+}
+.main-content .main-button{
+    margin-top: 20px;
+    background-color: var(--Soft-red);
+    font-size: 14px;
+    padding: 15px 0;
+    width: 175px;
+    font-weight: 800;
+    border-style: none;
+    letter-spacing: 2px;
+}
+.main-content .main-button:hover{
+    background-color: var(--Very-dark-blue);
+    color: var(--Off-white);
+}
+.new-container{
+    background-color: var(--Very-dark-blue);
+    color: var(--Off-white);
+    padding: 20px 20px 0 20px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.new-container .new-title{
+    color: var(--Soft-orange);
+}
+.new-article{
+    padding: 0 0 27px 0;
+    border-bottom: 1px solid var(--Dark-grayish-blue);
+}
+.new-article:last-child{
+    border-bottom: none;
+}
+.new-article p{
+    color: var(--Grayish-blue);
+    font-size: 15px;
+}
+.new-article h2:hover{
+    margin: 0;
+    color: var(--Soft-orange);
+    cursor: pointer;
+}
+.article{
+    display: flex;
+    gap: 15px;
+    padding-bottom: 24px;
+}
+.article img{
+    width: 100px;
+    object-fit: cover;
+}
+.article strong{
+    font-size: 28px;
+    color: var(--Soft-red);
+}
+.article h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+.article h3:hover{
+    color: var(--Soft-orange);
+    cursor: pointer;
+}
+.article p{
+    font-size: 14px;
+    color: var(--Dark-grayish-blue);
+}
+.article-container{
+    margin-top: 40px;
+}
+
+@media screen and (min-width: 768px){
+    .navbar{
+        visibility: visible;
+    }
+    .menu-hamburger{
+        display: none;
+    }
+    .main-article{
+        display: flex;
+        flex-direction: row;
+    }
+    .main-content{
+        flex: 2 1 0;
+    }
+    .new-container{
+        margin-top: 0;
+    }
+    .article-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 25px;
+    }
+      
+      .hidden {
+        display: none;
+      }
+      
+      .close-menu {
+        display: none;
+      }
+     .close-menu-li{
+        display: none;
+    }
+      
+      .overlay.visible {
+        display: none;
+      }
+      
+      .navbar{
+        position: relative;
+        list-style-type: none;
+        text-decoration: none;
+        justify-content: end;
+        width: 55%;
+        align-items: center;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        /* transform: translateX(0); */
+        
+
+    }
+    .open-button, .close-menu-li{
+        display: none;
+    }
+    .navbar a{
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--Very-dark-blue);
+    margin-left: 40px;
+    }
+    
+    .navbar a:hover{
+    color: var(--Soft-orange);
+    }
+
+    
+}
