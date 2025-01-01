@@ -22,7 +22,7 @@ export const Navbar = () => {
             <li className='close-menu-li'>
               <img src={closeMenu} onClick={handleMenu} className={` ${menu ? 'close-menu-li' : ''}`} alt="Close Menu" />
             </li>
-            <li>
+            <li className='close-menu'>
               <a href="#">Home</a>
             </li>
             <li>
