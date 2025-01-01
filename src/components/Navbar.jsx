@@ -18,7 +18,7 @@ export const Navbar = () => {
             <img src={burgerMenu} alt="Menu" />
           </button>
           <div className={`overlay ${menu ? 'visible' : ''}`} onClick={handleMenu}></div>
-          <ul className={`navbar ${menu ? 'open' : 'hidden'}`}>
+          <ul className={`navbar ${menu ? 'open' : ''}`}>
             <li className='close-menu-li'>
               <img src={closeMenu} onClick={handleMenu} className={` ${menu ? 'close-menu-li' : ''}`} alt="Close Menu" />
             </li>
