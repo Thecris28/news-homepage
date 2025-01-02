@@ -14,10 +14,10 @@ export const Navbar = () => {
     }
     return (
         <>
+        <div className={`overlay ${menu ? 'visible' : ''}`} onClick={handleMenu}></div>
           <button onClick={handleMenu} className='open-button'>
             <img src={menu ? closeMenu : burgerMenu} alt="Menu" />
           </button>
-          <div className={`overlay ${menu ? 'visible' : ''}`} onClick={handleMenu}></div>
           <ul className={`navbar ${menu ? 'open' : 'close-menu'}`}>
             {/* <li className='close-menu-li'>
               <img src={closeMenu} onClick={handleMenu} className={` ${menu ? 'close-menu-li' : 'close-menu-li'}`} alt="Close Menu" />
