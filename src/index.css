@@ -31,7 +31,6 @@ body {
 .main{
   width: 90%;
   margin: 0 auto;
-  padding-top: 20px;
   overflow: hidden;
   max-width: 1100px;
 }

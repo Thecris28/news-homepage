@@ -15,14 +15,14 @@ export const Navbar = () => {
     return (
         <>
           <button onClick={handleMenu} className='open-button'>
-            <img src={burgerMenu} alt="Menu" />
+            <img src={menu ? closeMenu : burgerMenu} alt="Menu" />
           </button>
           <div className={`overlay ${menu ? 'visible' : ''}`} onClick={handleMenu}></div>
-          <ul className={`navbar ${menu ? 'open' : ''}`}>
-            <li className='close-menu-li'>
-              <img src={closeMenu} onClick={handleMenu} className={` ${menu ? 'close-menu-li' : ''}`} alt="Close Menu" />
-            </li>
-            <li className='close-menu'>
+          <ul className={`navbar ${menu ? 'open' : 'close-menu'}`}>
+            {/* <li className='close-menu-li'>
+              <img src={closeMenu} onClick={handleMenu} className={` ${menu ? 'close-menu-li' : 'close-menu-li'}`} alt="Close Menu" />
+            </li> */}
+            <li>
               <a href="#">Home</a>
             </li>
             <li>

@@ -5,7 +5,7 @@ import imgDesktop from '../assets/images/image-web-3-desktop.jpg'
 
 export const MainArticle = () => {
   return (
-    <article >
+    <article className='main-article-container'>
         <picture>
             <source media="(max-width: 640px)" srcSet={imgMobile} />
             <source media="(min-width: 641px)" srcSet={imgDesktop} />
